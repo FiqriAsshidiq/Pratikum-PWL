@@ -24,7 +24,7 @@ return new class extends Migration
 
             $table->foreign('bookshelf_id')->references('bookshelf_id')->on('bookshelfs')
             ->onDelete('cascade')      
-            ->onUpdate('cascade');            
+            ->onUpdate('cascade');
         });
     }
 
