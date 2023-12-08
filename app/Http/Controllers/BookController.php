@@ -114,6 +114,10 @@ class BookController extends Controller
         return $pdf->download('data_buku.pdf');
 
     }
+    public function export(){
+        return Excel::download(new BookshelfExport, 'bookshelf.xlsx');
+    }
+
 
 
 }
