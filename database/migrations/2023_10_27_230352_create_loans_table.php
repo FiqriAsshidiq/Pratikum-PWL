@@ -13,12 +13,12 @@ return new class extends Migration
     {
         Schema::create('loans', function (Blueprint $table) {
             $table->id('loan_id');
-            $table->unsignedBigInteger('user_id');
+            $table->unsignedBigInteger('id');
             $table->date ('loan_at');
             $table->date ('return_at');
             $table->timestamps();
 
-            $table->foreign('user_id')->references('user_id')->on('users')
+            $table->foreign('id')->references('id')->on('users')
             ->onDelete('cascade')      
             ->onUpdate('cascade');
 
