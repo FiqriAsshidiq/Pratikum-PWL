@@ -4,8 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\Book;
 use App\Models\Bookshelf;
-use PDF;
 use Illuminate\Http\Request;
+use PDF;
 
 class BookController extends Controller
 {
@@ -97,8 +97,6 @@ class BookController extends Controller
     public function destroy(string $id)
     {
         $book = Book::findOrFail($id);
-
-
         $book->delete();
         $notification = array(
             'message' => 'Data buku berhasil dihapus',
@@ -106,11 +104,15 @@ class BookController extends Controller
         );
         return redirect()->route('book')->with($notification);
     }
+ 
+ 
     public function print()
     {
+
         $books = Book::all();
         $pdf = PDF::loadview('books.print', ['books' => $books]);
         return $pdf->download('data_buku.pdf');
+
     }
 
 

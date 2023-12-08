@@ -13,6 +13,8 @@
                     <!-- Cinten here -->
                     
                     <x-primary-button tag="a" href="{{route('book.create')}}">Tambah Data Buku</x-primary-button>
+                    <x-primary-button tag="a" href="{{ route('book.print')}}" target='blank'>Cetak Buku</x-primary-button>
+
                     <br><br>
             
                     <x-table>
