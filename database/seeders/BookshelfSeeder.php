@@ -16,7 +16,8 @@ class BookshelfSeeder extends Seeder
         Bookshelf::insert([
             [
                 'id' => '1',
-                'code' => '620', 'name' => 'Engineering',
+                'code' => '620', 
+                'name' => 'Engineering',
                 'created_at' => now(),
                 'updated_at' => now()
             ],
