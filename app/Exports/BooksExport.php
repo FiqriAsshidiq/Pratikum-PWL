@@ -26,11 +26,17 @@ class BooksExport implements FromCollection, FromArray, WithHeadings, ShouldAuto
     public function headings(): array
     {
         return [
-            'NO',
-            'Judul',
-            'Penulis',
-            'Tahun',
-            'Penerbit'
+            'id',           
+            'title',        
+            'author',       
+            'year',      
+            'publisher',    
+            'city',         
+            'quantity',     
+            'cover',        
+            'creat_at',     
+            'update_at',    
+            'bookshelf_id',  
         ];
     } 
 }

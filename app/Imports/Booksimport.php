@@ -6,7 +6,7 @@ use App\Models\Book;
 use Maatwebsite\Excel\Concerns\ToModel;
 use Maatwebsite\Excel\Concerns\WithHeadingRow;
 
-class BookshelfImport implements WithHeadingRow, ToModel
+class BooksImport implements WithHeadingRow, ToModel
 {
     /**
     * @param array $row
@@ -16,12 +16,18 @@ class BookshelfImport implements WithHeadingRow, ToModel
     public function model(array $row)
     {
         return new Book([
-            'title' => $row['title'],
-            'author' => $row['author'],
-            'year' => $row['year'],
-            'publisher' => $row['publisher'],
-            'quantity' => $row['quantity'],
-            'bookshelf_id' => $row['bookshelf_id'],
+            'id'            => $row['id'],
+            'title'         => $row['title'],
+            'author'        => $row['author'],
+            'year'          => $row['year'],
+            'publisher'     => $row['publisher'],
+            'city'          => $row['city'],
+            'quantity'      => $row['quantity'],
+            'cover'         => $row['cover'],
+            'creat_at'     => $row['creat_at'],
+            'update_at'    => $row['update_at'],
+            'bookshelf_id'  => $row['bookshelf_id'],
+                    
         ]);
     }
 }

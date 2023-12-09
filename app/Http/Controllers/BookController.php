@@ -3,10 +3,11 @@
 namespace App\Http\Controllers;
 
 use App\Models\Book;
+use App\Models\Bookshelf;
 use Illuminate\Http\Request;
 use Maatwebsite\Excel\Facades\Excel;
 use App\Exports\BooksExport;
-use App\Imports\Booksimport;
+use App\Imports\BooksImport;
 use PDF;
 
 
@@ -134,6 +135,6 @@ class BookController extends Controller
             'message' => 'Import data berhasil dilakukan',
             'alert-type' => 'success'
         );
-        return redirect()->route('books.index')->with($notification);
+        return redirect()->route('book')->with($notification);
     }
 }
