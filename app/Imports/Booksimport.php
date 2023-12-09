@@ -24,8 +24,8 @@ class BooksImport implements WithHeadingRow, ToModel
             'city'          => $row['city'],
             'quantity'      => $row['quantity'],
             'cover'         => $row['cover'],
-            'creat_at'     => $row['creat_at'],
-            'update_at'    => $row['update_at'],
+            'creat_at'      => $row['creat_at'],
+            'update_at'     => $row['update_at'],
             'bookshelf_id'  => $row['bookshelf_id'],
                     
         ]);
