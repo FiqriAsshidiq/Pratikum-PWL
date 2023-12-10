@@ -31,6 +31,11 @@
                     </x-nav-link>
                 </div>
 
+                <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                    <x-nav-link :href="route('anggota')" :active="request()->routeIs('anggota') || request()->routeIs('anggota.create')">
+                        {{ __('Daftar Anggota') }}
+                    </x-nav-link>
+                </div>
             </div>
             <!-- Settings Dropdown -->
             <div class="hidden sm:flex sm:items-center sm:ms-6">

@@ -69,4 +69,16 @@ Route::middleware('auth')->group(function () {
    Route::post('/books/import', [BookController::class, 'import'])->name('book.import');
 });
 
+Route::middleware('auth')->group(function () {
+   Route::get('/anggota', [AnggotaController::class, 'index'])->name('anggota');
+   Route::get('/anggota/create', [BookController::class, 'create'])->name('anggota.create');
+   // Route::post('/books', [BookController::class, 'store'])->name('book.store');
+   // Route::get('/books/{id}/edit', [BookController::class,'edit'])->name('book.edit');
+   // Route::match(['put', 'patch'], '/books/{id}',[BookController::class, 'update'])->name('book.update');
+   // Route::delete('/books/{id}', [BookController::class,'destroy'])->name('book.destroy');
+   // Route::get('/books/print', [BookController::class, 'print'])->name('book.print');
+   // Route::get('/books/export', [BookController::class, 'export'])->name('book.export');
+   // Route::post('/books/import', [BookController::class, 'import'])->name('book.import');
+});
+
 require __DIR__.'/auth.php';
